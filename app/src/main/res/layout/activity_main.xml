@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mvvm.MainViewModel" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:context=".MainActivity">
+
+        <Button
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:onClick='@{()->viewModel.increaseCounter()}'
+            android:textSize="@dimen/_25ssp"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{""+viewModel.counter}'
+            android:textSize="@dimen/_50ssp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/min"
+            android:onClick='@{()->viewModel.decreaseCounter()}'
+            android:textSize="@dimen/_25ssp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+    </LinearLayout>
+</layout>
