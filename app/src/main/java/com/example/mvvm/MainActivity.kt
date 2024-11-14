@@ -9,14 +9,14 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.example.mvvm.data.SaveCounter
 import com.example.mvvm.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var  binding: ActivityMainBinding
 
-    private val viewModel:MainViewModel by viewModels {
-        MainViewModel.Factory(SaveCounter(this))
-    }
+    private val viewModel:MainViewModel by viewModels ()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

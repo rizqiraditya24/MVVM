@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+    alias(libs.plugins.daggerHilt)
 }
 
 android {
@@ -54,4 +55,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.hilt.android.v2511)
+    kapt(libs.hilt.android.compiler.v2511)
+}
+
+kapt {
+    correctErrorTypes = true
 }
