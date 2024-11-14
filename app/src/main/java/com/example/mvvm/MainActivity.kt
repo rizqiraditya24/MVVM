@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
-import com.example.mvvm.data.SaveCounter
 import com.example.mvvm.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
